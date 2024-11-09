@@ -1,0 +1,41 @@
+[gd_scene load_steps=3 format=3 uid="uid://48csibxb04h6"]
+
+[ext_resource type="FontFile" uid="uid://luwpfyennv77" path="res://Assets/fonts/PixelOperator8-Bold.ttf" id="1_b5vuy"]
+[ext_resource type="Script" path="res://Scripts/credits.gd" id="1_fg1t5"]
+
+[node name="credits" type="CanvasLayer"]
+script = ExtResource("1_fg1t5")
+
+[node name="Label" type="Label" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -46.5
+offset_top = -11.5
+offset_right = 46.5
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("1_b5vuy")
+theme_override_font_sizes/font_size = 20
+text = "Art : analogStudios_ and RottingPixels"
+
+[node name="back" type="Button" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -49.0
+offset_top = 50.0
+offset_right = 39.0
+offset_bottom = 81.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("1_b5vuy")
+theme_override_font_sizes/font_size = 20
+text = "Back"
+
+[connection signal="pressed" from="back" to="." method="_on_back_pressed"]
